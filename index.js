@@ -7,6 +7,7 @@ app.get('/', function (req, res) {
   res.send('Welcome to Twilio API WhatsApp by Luciano Buhler!');
 });
 
+// send WhatsApp message 
 app.get('/sendMessage', function (req, res) {
   require('dotenv').config()
   const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -33,5 +34,5 @@ app.get('/sendMessage', function (req, res) {
 });
 
 app.listen(PORT, function () {
-  console.log(`Twilio API WhatsApp app listening on port ${PORT}!`);
+  console.log(`[index] Twilio API WhatsApp app listening on port ${PORT}!`);
 });
